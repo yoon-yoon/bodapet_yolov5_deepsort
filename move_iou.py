@@ -77,6 +77,7 @@ def analysis(save_txt_path):
 	        if (iou < 0.7):
 	            move_time += 1
 	    time_list.append(move_time)
+	    move_time = 0
 
 
 	# ########## 0.5초 버전
@@ -114,6 +115,7 @@ def analysis(save_txt_path):
 	#         if (iou < 0.70):
 	#             move_time+=0.5
 	#     time_list.append(move_time)
+	#     move_time = 0
 
 
 	return time_list
