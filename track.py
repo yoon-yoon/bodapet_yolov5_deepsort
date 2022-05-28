@@ -284,6 +284,9 @@ def detect(opt):
 
     import move_iou
     print(move_iou.analysis(save_txt_path))
+    
+    import visit_iou
+    visit_iou.analysis(save_txt_path)
 
 
 if __name__ == '__main__':
