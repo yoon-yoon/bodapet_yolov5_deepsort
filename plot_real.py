@@ -17,10 +17,13 @@ def plot(save_txt_path, dir_path, im):
     # 저장된 파일들 경로
     save_dir_path = dir_path
 
+    # 색깔 리스트 (색깔 중복 여부 확인 하기 위한 리스트)
+    colors = []
+
     # 저장된 텍스트 파일 가져오기
     file_list = glob.glob(txt_path)
     file_list_py = [file for file in file_list if file.endswith(".txt")]
-    colors = []
+
     # 텍스트 파일을 데이터 프레임 형태로 불러오기
     file = pd.read_table(file_list_py[0], header=None,
                          names=['frame', 'track_id', 'bbox_left', 'bbox_top', 'w', 'h', 'cx', 'cy', '2', '3', '4'],
