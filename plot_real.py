@@ -44,6 +44,7 @@ def plot(save_txt_path, dir_path, im):
         plt.plot(globals()["ob_x{}".format(i)], globals()["ob_y{}".format(i)], color=use_color,
                  label=custom_labels[i - 1], linewidth=4)
         plt.axis('off')
+        colors.append(use_color)
 
     # track.py 에서 저장한 첫 프레임 이미지 사용
     plt.imshow(im_rgb)
@@ -64,6 +65,7 @@ def plot(save_txt_path, dir_path, im):
         plt.scatter(globals()["ob_x{}".format(i)], globals()["ob_y{}".format(i)], color=use_color, alpha=0.06,
                     label=custom_labels[i - 1])
         plt.axis('off')
+        colors.append(use_color)
 
     # track.py 에서 저장한 첫 프레임 이미지 사용
     plt.imshow(im_rgb)
